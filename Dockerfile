@@ -10,6 +10,7 @@ RUN dpkg --add-architecture i386 && apt-get update -yqq && apt-get install -y \
   ruby2.4 \
   ruby2.4-dev \
   build-essential \
+  sudo \
   && apt-get clean
 
-RUN gem install fastlane
+RUN sudo gem install fastlane
